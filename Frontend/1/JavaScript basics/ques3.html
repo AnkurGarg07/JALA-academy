@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f4f4f4;
+          margin: 0;
+          padding: 20px;
+        }
+
+        ul {
+          list-style-type: none;
+          padding: 0;
+        }
+
+        li {
+          background: #fff;
+          margin: 5px 0;
+          padding: 10px;
+        }
+      button {
+
+        background-color: black;
+        color: wheat;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        margin: 10px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Fruit List</h1>
+    <label for="count"
+      >Enter how many times you want to execute the for loop</label
+    >
+    <input type="text" id="count" name="count" />
+    <button type="submit" onclick="forLoop()">Start the for loop</button>
+    <ul id="forLoop"></ul>
+    <script>
+      forLoop = () => {
+        element = document.getElementById("count");
+        count = element.value;
+        if (!count) {
+          alert("Enter a value");
+
+        }
+        const values = [];
+        for (let i = 1; i <=count; i++) {
+          values.push(i);
+        }
+
+        const loopList = document.getElementById("forLoop");
+        loopList.innerHTML = "";
+        for (let i in values) {
+          const li = document.createElement("li");
+          li.textContent = i;
+          loopList.appendChild(li);
+        }
+      };
+    </script>
+  </body>
+</html>

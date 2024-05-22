@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Fruits</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background: #fff;
+            margin: 5px 0;
+            padding: 10px;
+            
+        }
+
+        button {
+            background-color: black;
+            color: wheat;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 10px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fruit List</h1>
+    <button onclick="sortFruits()">Sort in Descending Order</button>
+    <ul id="fruit-list"></ul>
+
+    <script>
+        const fruits = ['Apple', 'Orange', 'Banana', 'Mango', 'Pineapple', 'Grapes'];
+
+        function displayFruits() {
+            const fruitList = document.getElementById('fruit-list');
+            fruitList.innerHTML = '';
+            fruits.forEach(fruit => {
+                const li = document.createElement('li');
+                li.innerText = fruit;
+                fruitList.appendChild(li);
+            });
+        }
+        function sortFruits() {
+            fruits.sort((a, b) => b.localeCompare(a));
+            displayFruits();
+        }
+        displayFruits();
+    </script>
+</body>
+</html>

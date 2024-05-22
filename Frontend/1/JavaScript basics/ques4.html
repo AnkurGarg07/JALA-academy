@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+      }
+      button {
+        background-color: black;
+        color: wheat;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        margin: 10px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main" >
+        <h1>display object properties by Different methods</h1>
+    <button onclick="bracketAccess()">Access values by bracket method</button>
+    <button onclick="dotAccess()">Access values by dot method</button>
+    </div>
+    <script>
+        const obj={
+            firstName:"Ankur",
+            lastName:"Garg"
+        }
+        bracketAccess=()=>{
+            const div=document.getElementById('main');
+            const p=document.createElement("p");
+            p.innerText = `Accessed by bracket method:First Name= ${obj["firstName"]}, Last Name= ${obj["lastName"]}`;
+            div.appendChild(p);
+
+        }
+        dotAccess=()=>{
+            const div=document.getElementById('main');
+            const p=document.createElement("p");
+            p.innerText = `Accessed by dot method:First Name= ${obj.firstName}, Last Name= ${obj.lastName}`;
+            div.appendChild(p);
+        }
+    </script>
+  </body>
+</html>
