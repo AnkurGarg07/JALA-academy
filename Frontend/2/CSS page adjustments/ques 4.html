@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>padding and margin</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            display: flex;
+        }
+        .container{
+            width: 300px;
+            
+            border: 2px solid black;
+            background-color: lightblue;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .padding-box {
+            background-color: lightgreen;
+            padding: 20px;
+            border: 2px solid darkgreen;
+        }
+
+        .margin-box {
+            background-color: lightcoral;
+            margin: 20px;
+            border: 2px solid darkred;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <h2>Padding Box</h2>
+        <div class="padding-box">
+            <p>This box has padding.</p>
+        </div>
+        </div>
+        <div class="container">
+            <h2>Margin Box</h2>
+        <div class="margin-box">
+            <p>This box has margin.</p>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

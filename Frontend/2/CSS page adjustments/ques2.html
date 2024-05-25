@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility and Display Example</title>
+    <style>
+        .hidden {
+            visibility: hidden;
+        }
+
+        .visible {
+            visibility: visible;
+        }
+
+        .collapse {
+            visibility: collapse; 
+        }
+
+        .none {
+            display: none; 
+        }
+
+        .inline {
+            display: inline; 
+        }
+
+        .block {
+            display: block; 
+        }
+
+        .contents {
+            display: contents; 
+        }
+
+        .list-item {
+            display: list-item; 
+        }
+
+        .container {
+            margin: 20px 0;
+        }
+
+        .container > div {
+            border: 1px solid black;
+            margin: 5px 0;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Visibility and Display Example</h1>
+
+    <div class="container">
+        <h2>Visibility</h2>
+        <div class="hidden">This element is hidden (visibility: hidden).</div>
+        <div class="visible">This element is visible (visibility: visible).</div>
+        <div class="collapse">This element has collapse visibility (visibility: collapse).</div>
+    </div>
+
+    <div class="container">
+        <h2>Display</h2>
+        <div class="none">This element is not displayed (display: none).</div>
+        <div class="inline">This element is displayed inline (display: inline).</div>
+        <div class="block">This element is displayed as a block (display: block).</div>
+        <div class="contents">This element is displayed as contents (display: contents).
+            <span>Child element 1</span>
+            <span>Child element 2</span>
+        </div>
+        <div class="list-item">This element is displayed as a list item (display: list-item).</div>
+    </div>
+</body>
+</html>

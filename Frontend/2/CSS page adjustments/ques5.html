@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiple Background Images</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f0f0f0;
+      }
+
+      .multi-background {
+        width: 80%;
+        height: 80%;
+        border: 2px solid #000;
+        background-image: url("https://images.unsplash.com/photo-1597589827317-4c6d6e0a90bd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c3F1YXJlfGVufDB8fDB8fHww"),
+          url("https://images.unsplash.com/photo-1525351326368-efbb5cb6814d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNxdWFyZXxlbnwwfHwwfHx8MA%3D%3D"),
+          url("https://images.unsplash.com/photo-1562376552-0d160a2f238d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHNxdWFyZXxlbnwwfHwwfHx8MA%3D%3D"),
+          url("https://images.unsplash.com/photo-1600354587397-681c16c184bf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHNxdWFyZXxlbnwwfHwwfHx8MA%3D%3D");
+        background-size: 250px 250px, 250px 250px, 250px 250px, 250px 250px;
+        background-position: top left, bottom right,top right,bottom left;
+        background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+      }
+
+      .content {
+        padding: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="multi-background">
+      <div class="content">
+        <h1>Multiple Background Images</h1>
+        <p>
+          This element has four background images with different sizes and
+          positions.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

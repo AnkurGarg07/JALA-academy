@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call() and apply() Example</title>
+</head>
+<body>
+    <script>
+        const person = {
+            firstName: "Ankur",
+            lastName: "Garg"
+        };
+
+        function greet(greeting, punctuation) {
+            console.log(`${greeting}, ${this.firstName} ${this.lastName}${punctuation}`);
+        }
+
+        greet.call(person, "Hello", "!"); 
+
+        greet.apply(person, ["Hi", "."]); // Output: Hi, John Doe.
+        // call() takes arguments separately
+        // apply() takes arguments as an array
+    </script>
+</body>
+</html>

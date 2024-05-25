@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+Person.prototype.country = "India";
+Person.prototype.gender = "Male";
+
+const person1 = new Person("Ankur", 20);
+const person2 = new Person("Rahul", 19);
+
+console.log(person1.country); 
+console.log(person2.country); 
+
+console.log(person1.gender); 
+console.log(person2.gender); 
+
+    </script>
+    
+</body>
+</html>

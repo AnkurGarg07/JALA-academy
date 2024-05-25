@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Attributes Example</title>
+</head>
+<body>
+    <h1>Input Attributes Example</h1>
+
+    <form>
+        <label for="text">Text:</label>
+        <input type="text" id="text" name="text" value="Ankur Garg" size="30" maxlength="100" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" maxlength="20" required><br><br>
+
+        <label for="submit">Submit:</label>
+        <input type="submit" id="submit" value="Submit"><br><br>
+
+        <label for="reset">Reset:</label>
+        <input type="reset" id="reset" value="Reset"><br><br>
+
+        <label>Radio:</label>
+        <input type="radio" id="radio1" name="radio" value="1" required>
+        <label for="radio1">Option 1</label>
+        <input type="radio" id="radio2" name="radio" value="2">
+        <label for="radio2">Option 2</label><br><br>
+
+        <label>Checkbox:</label>
+        <input type="checkbox" id="checkbox1" name="checkbox" value="1">
+        <label for="checkbox1">Option 1</label>
+        <input type="checkbox" id="checkbox2" name="checkbox" value="2">
+        <label for="checkbox2">Option 2</label><br><br>
+
+        <label for="button">Button:</label>
+        <input type="button" id="button" value="Click Me"><br><br>
+    </form>
+
+
+    <h2>HTML5 Input Types</h2>
+
+    <form>
+        <label for="number">Number:</label>
+        <input type="number" id="number" name="number" min="1" max="10" required><br><br>
+
+        <label for="range">Range:</label>
+        <input type="range" id="range" name="range" min="0" max="100"><br><br>
+
+        <label for="color">Color:</label>
+        <input type="color" id="color" name="color" value="#ff0000"><br><br>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required><br><br>
+
+        <label for="file">File:</label>
+        <input type="file" id="file" name="file"><br><br>
+
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time"><br><br>
+
+        <label for="month">Month:</label>
+        <input type="month" id="month" name="month"><br><br>
+
+        <label for="week">Week:</label>
+        <input type="week" id="week" name="week"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+    </form>
+
+    <h2>Input Restrictions</h2>
+
+    <form>
+        <label for="disabled">Disabled:</label>
+        <input type="text" id="disabled" name="disabled" value="Disabled Input" disabled><br><br>
+
+        <label for="max">Max:</label>
+        <input type="number" id="max" name="max" max="10" value="5"><br><br>
+
+        <label for="maxlength">Maxlength:</label>
+        <input type="text" id="maxlength" name="maxlength" maxlength="10" value="Maxlength"><br><br>
+
+        <label for="min">Min:</label>
+        <input type="number" id="min" name="min" min="1" value="1"><br><br>
+
+        <label for="readonly">Readonly:</label>
+        <input type="text" id="readonly" name="readonly" value="Readonly Input" readonly><br><br>
+
+        <label for="required">Required:</label>
+        <input type="text" id="required" name="required" required><br><br>
+
+        <label for="size">Size:</label>
+        <input type="text" id="size" name="size" value="Size" size="40"><br><br>
+    </form>
+
+
+    <h2>Using Target Attribute</h2>
+
+    <a href="https://www.google.com" target="_self">Open Google.com in the same frame</a><br><br>
+    <a href="https://www.google.com" target="_parent">Open Google.com in the parent frame</a><br><br>
+    <a href="https://www.google.com" target="_top">Open Google.com in the full body of the window</a><br><br>
+    <a href="https://www.google.com" target="_blank">Open Google.com in the new tab</a><br><br>
+
+    <h2>I-frames and Marquee</h2>
+
+    <marquee behavior="scroll" direction="left">This is a scrolling text using the marquee tag.</marquee><br><br>
+
+    <iframe src="https://www.google.com" width="600" height="400" title="Example Iframe"></iframe>
+
+</body>
+</html>

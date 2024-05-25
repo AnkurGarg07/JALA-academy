@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:rgb(177, 228, 177);
+        }
+        .box{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        button{
+            border: 2px solid black;
+            border-radius: 15px;
+            padding: 10px 30px;
+            transition:0.2s linear;
+
+        }
+        button:hover{
+            background-color: rgb(196, 194, 194);
+            cursor: pointer;
+        }
+        p{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box" >
+            <button id="btn">click me to increment:</button>
+            <p id="para">0</p>
+        </div>
+    </div>
+    <script>
+        incrementValue=()=>{
+            para=document.querySelector("#para")
+            currentValue=parseInt(para.textContent)
+            para.textContent=currentValue+1;
+        }
+        btn=document.querySelector("#btn");
+        btn.addEventListener("click",incrementValue);
+
+
+    </script>
+    
+</body>
+</html>
