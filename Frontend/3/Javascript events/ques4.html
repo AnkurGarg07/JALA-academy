@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            gap: 20px;
+        }
+        button {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="setCookie('username', 'Ankur Garg', 7)">Set Cookie</button>
+    <button onclick="alert(getCookie('username'))">Get Cookie</button>
+    <button onclick="alert(checkCookie('username'))">Check Cookie</button>
+
+    <script>
+        function setCookie(name, value, days) {
+            const d = new Date();
+            d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + d.toUTCString();
+            document.cookie = `${name}=${value};${expires};path=/`;
+        }
+
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const cookiesArray = document.cookie.split(';');
+            for (let cookie of cookiesArray) {
+                cookie = cookie.trim();
+                if (cookie.startsWith(nameEQ)) {
+                    return cookie.substring(nameEQ.length);
+                }
+            }
+            return null;
+        }
+
+        function checkCookie(name) {
+            return getCookie(name) !== null;
+        }
+    </script>
+</body>
+</html>

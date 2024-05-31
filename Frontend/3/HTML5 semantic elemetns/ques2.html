@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+      body{
+          background-color: rgb(170, 144, 144);
+      }
+      .main{
+        height: 100vh;
+          display: flex;
+          gap: 20px;
+          padding: 0px 50px;
+          justify-content: center;
+          align-items: center;
+      }
+      form{
+          border: 2px solid black;
+          width: 40%;
+          padding: 20px;
+      }
+      input{
+          padding: 5px;
+          border-radius: 8px;
+      }
+      th, td {
+          padding: 12px;
+          border: 1px solid #ddd;
+          text-align: left;
+      }
+      th {
+          background-color: #f2f2f2;
+          color: #333;
+      }
+      article {
+            margin-bottom: 20px;
+        }
+        article header {
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        article header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+        article header p {
+            font-size: 14px;
+            color: #666;
+        }
+        article section {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        article footer {
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <form>
+        <h1>Form</h1>
+        <label for="text">Enter your name:</label>
+        <input
+          type="text"
+          id="text"
+          name="text"
+          value="Ankur Garg"
+          size="30"
+          maxlength="100"
+          required
+        /><br /><br />
+
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          maxlength="20"
+          required
+        /><br /><br />
+
+        <label for="submit">Submit:</label>
+        <input type="submit" id="submit" value="Submit" /><br /><br />
+
+        <label for="reset">Reset:</label>
+        <input type="reset" id="reset" value="Reset" /><br /><br />
+      </form>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+            <th>Occupation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ankur Garg</td>
+            <td>19</td>
+            <td>Agra</td>
+            <td>Software Engineer</td>
+          </tr>
+          <tr>
+            <td>Kumkum Bhatia</td>
+            <td>20</td>
+            <td>Shahdra</td>
+            <td>video editor</td>
+          </tr>
+          <tr>
+            <td>Laghvi Nagar</td>
+            <td>20</td>
+            <td>Pulbangash</td>
+            <td>web designer</td>
+          </tr>
+          <tr>
+            <td>Paras Sachdeva</td>
+            <td>20</td>
+            <td>Sahranpur</td>
+            <td>Typist</td>
+          </tr>
+        </tbody>
+      </table>
+      <article>
+        <header>
+            <h1>The Benefits of Learning HTML</h1>
+            <p>By XYZ | May 25, 2024</p>
+        </header>
+        <section>
+            <p>HTML, or HyperText Markup Language, is the standard language used to create web pages. Understanding HTML is essential for anyone looking to pursue a career in web development or design. HTML forms the backbone of the web, providing the structure for content on the internet.</p>
+            <p>Learning HTML can offer numerous benefits, including the ability to create your own websites, improve your understanding of web technologies, and enhance your career opportunities. Whether you're a beginner or an experienced developer, mastering HTML is a valuable skill that can open up many doors in the tech industry.</p>
+        </section>
+        <footer>
+            <p>Published in: <a href="#">Web Development</a></p>
+        </footer>
+    </article>
+    </div>
+  </body>
+</html>

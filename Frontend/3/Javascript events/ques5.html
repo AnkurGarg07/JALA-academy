@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access JSON Object</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        #info {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Access JSON Object</h1>
+    <button id="showInfoBtn">Show Info</button>
+    <div id="info"></div>
+
+    <script>
+        // JSON object
+        const person = {
+            name: "Ankur Garg",
+            age: 19,
+            address: {
+                street: "Badli street",
+                city: "Delhi",
+                country: "India"
+            },
+            hobbies: ["Poetry", "Programming", "music"]
+        };
+
+        function displayPersonInfo() {
+            const infoDiv = document.getElementById("info");
+            infoDiv.innerHTML = `
+                <p><strong>Name:</strong> ${person.name}</p>
+                <p><strong>Age:</strong> ${person.age}</p>
+                <p><strong>Street:</strong> ${person.address.street}</p>
+                <p><strong>City:</strong> ${person.address.city}</p>
+                <p><strong>Country:</strong> ${person.address.country}</p>
+                <p><strong>Hobbies:</strong> ${person.hobbies.join(", ")}</p>
+            `;
+        }
+        document.getElementById("showInfoBtn").addEventListener("click", displayPersonInfo);
+    </script>
+</body>
+</html>

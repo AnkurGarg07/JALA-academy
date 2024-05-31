@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>non semantic elements</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(170, 144, 144);
+        }
+        .inside1,.inside2{
+            border: 2px solid black;
+            padding: 20px;
+            background-color: beige;
+        }
+        .inside1{
+            margin: 40px 20px;
+        }
+        .inside2{
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="inside1">This is a div element which is a non semantic element</div>
+        <span class="inside2">This is a span element which is a non semantic element</span>
+    </div>
+</body>
+</html>

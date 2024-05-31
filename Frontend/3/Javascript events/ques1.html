@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date and Time Display</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f9;
+            flex-direction: column;
+            gap: 20px;
+        }
+        button {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="btn">
+            <button id="dateButton">Click to show date and time</button>
+        </div>
+        <div class="date"></div>
+    </div>
+    <script>
+        function formatDateTimeToString(date) {
+            var dd = (date.getDate() < 10 ? '0' : '') + date.getDate();
+            var MM = ((date.getMonth() + 1) < 10 ? '0' : '') + (date.getMonth() + 1);
+            var yyyy = date.getFullYear();
+            var hours = (date.getHours() < 10 ? '0' : '') + date.getHours();
+            var minutes = (date.getMinutes() < 10 ? '0' : '') + date.getMinutes();
+            return dd + "." + MM + "." + yyyy + ' ' + hours + ':' + minutes;
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const btn = document.querySelector("#dateButton");
+            const datePara = document.querySelector(".date");
+
+            btn.addEventListener('click', () => {
+                const date = new Date();
+                datePara.innerHTML = '';
+                const p = document.createElement('p');
+                p.textContent = formatDateTimeToString(date);
+                datePara.appendChild(p);
+            });
+        });
+    </script>
+</body>
+</html>
