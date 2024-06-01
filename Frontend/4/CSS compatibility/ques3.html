@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .basic-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 100px);
+            border: 2px solid #000;
+        }
+
+        .nested-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 200px 200px;
+            border: 2px solid #000;
+        }
+
+        .nested-grid .nested {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 3px;
+            border: 1px solid #000;
+        }
+
+        .flexible-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: repeat(2, 150px);
+            border: 2px solid #000;
+        }
+
+        .item {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Basic Grid</h2>
+        <div class="basic-grid">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+        </div>
+
+        <h2>Nested Grid</h2>
+        <div class="nested-grid">
+            <div class="item">1</div>
+            <div class="item nested">
+                <div class="item">2.1</div>
+                <div class="item">2.2</div>
+                <div class="item">2.3</div>
+                <div class="item">2.4</div>
+            </div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+        </div>
+
+        <h2>Flexible Grid</h2>
+        <div class="flexible-grid">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+        </div>
+    </div>
+</body>
+</html>

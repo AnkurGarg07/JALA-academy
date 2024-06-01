@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout with Flexbox</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .header, .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .main, .aside {
+            background: #f0f0f0;
+            padding: 20px;
+        }
+
+        .main img {
+            width: 50%;
+            height: auto;
+        }
+
+        .main video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Flexbox layout for larger screens */
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .header, .footer {
+                flex-basis: 100%;
+            }
+
+            .aside {
+                flex-basis: 25%;
+               
+            }
+
+            .main {
+                flex-basis: 75%;
+               
+            }
+        }
+
+        /* Flexbox layout for smaller screens */
+        @media (max-width: 767px) {
+            .header, .footer {
+                flex-basis: 100%;
+            }
+
+            .aside {
+                order: 2;
+            }
+
+            .main {
+                order: 1;
+            }
+            .main img {
+            width: 80%;
+            height: auto;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Responsive Layout with Flexbox</h1>
+        </div>
+        <div class="main">
+            <h2>Main Content</h2>
+            <p>This is the main content area.</p>
+            <img src="https://images.unsplash.com/photo-1624375414270-def180a92462?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Placeholder Image">
+            <p>Below is a video:</p>
+            <video controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="aside">
+            <h2>Sidebar</h2>
+            <p>This is the sidebar content.</p>
+        </div>
+        <div class="footer">
+            <p>Footer Content</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Layout Example</title>
+    <style>
+        .fixed-table {
+            table-layout: fixed;
+            width: 50%;
+        }
+        
+        .fixed-table th, .fixed-table td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+            word-wrap: break-word;
+        }
+        
+        .auto-table {
+            table-layout: auto;
+        }
+        
+        .auto-table th, .auto-table td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h2>Table with table-layout: fixed</h2>
+    <table class="fixed-table">
+        <thead>
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>This is some long text that will be cut off because of the fixed layout.</td>
+                <td>Short text</td>
+                <td>Another long piece of text that should wrap because of the fixed layout setting.</td>
+            </tr>
+            <tr>
+                <td>Short text</td>
+                <td>This is some more long text that will wrap.</td>
+                <td>Even more text that will wrap in this cell.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Table with table-layout: auto</h2>
+    <table class="auto-table">
+        <thead>
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>This is some long text that will be adjusted according to content.</td>
+                <td>Short text</td>
+                <td>Another long piece of text that will adjust according to content.</td>
+            </tr>
+            <tr>
+                <td>Short text</td>
+                <td>This is some more long text that will adjust.</td>
+                <td>Even more text that will adjust in this cell.</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
